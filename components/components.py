@@ -1,7 +1,8 @@
 from selenium.webdriver.common.by import By
-class WbElement:
 
-    def __init__(self, driver, locator='', locator_type = 'css'):
+class WebElement:
+
+    def __init__(self, driver, locator='', locator_type = ''):
         self.driver = driver
         self.locator = locator
         self.locator_type = locator_type
@@ -9,8 +10,8 @@ class WbElement:
     def find_element(self):
         return self.driver.find_element(self.get_by_type(), self.locator)
 
-    def click(self):
-        self.find_element().click()
+    def send_keys(self, text: str):
+        self.find_element().send_keys(text)
 
     def get_by_type(self):
         if self.locator_type == 'id':
@@ -28,3 +29,5 @@ class WbElement:
         else:
             print('locator type ' + self.locator_type + 'not correct')
         return False
+
+

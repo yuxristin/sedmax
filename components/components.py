@@ -2,10 +2,13 @@ from selenium.webdriver.common.by import By
 
 class WebElement:
 
-    def __init__(self, driver, locator='', locator_type = ''):
+    def __init__(self, driver, locator='', locator_type=''):
         self.driver = driver
         self.locator = locator
         self.locator_type = locator_type
+
+    def click(self):
+        self.find_element().click()
 
     def find_element(self):
         return self.driver.find_element(self.get_by_type(), self.locator)

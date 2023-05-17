@@ -4,7 +4,7 @@ from components.components import WebElement
 
 def test_login_form(browser):
     form = DemoSedMax(browser)
-
     form.visit()
-    form.login.send_keys('252525')
+
+    form.btn_v.click()
 

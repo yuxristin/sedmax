@@ -9,7 +9,8 @@ class DemoSedMax(BasePage):
             self.login = WebElement(driver, '#Login')
             self.password = WebElement(driver, '#Password')
             self.btn_v = WebElement(driver, '#main > div > div > form > button')
-            self.alert = WebElement(driver, '#main > div > div > form > div.ant-login-alert.ant-login-alert-error.ant-login-alert-no-icon.login-login-form-module_error___Fq9km')
+            self.alert_message = WebElement(driver, '#main > div > div > form > div.ant-login-alert.ant-login-alert-error.ant-login-alert-no-icon.login-login-form-module_error___Fq9km > div > div')
+            self.visible_pass = WebElement(driver, '#main > div > div > form > div:nth-child(2) > div > div > div > div > span > span.ant-login-input-suffix > span > svg')
 
 
 
